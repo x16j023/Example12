@@ -16,5 +16,20 @@ namespace Example12
         {
             InitializeComponent();
         }
+
+        private void btnjudge_Click(object sender, EventArgs e)
+        {
+            int month = int.Parse(tbxMonth.Text);
+            if (month >= 1 && month <= 12)
+            {
+                if (month == 1 || month == 3 || month == 5 ||
+                    month == 7 || month == 8 || month == 10 || month == 12) 
+                lblresult.Text = "大の月";
+                else
+                lblresult.Text = "小の月";
+            }
+            else
+                lblresult.Text = "入力エラー";
+        }
     }
 }
